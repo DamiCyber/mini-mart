@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <center>
+        <h1 style="text-transform: uppercase; color: rgb(34, 34, 195);">mimi mart</h1>
+       
+        <div class="let" style="flex-direction: column; display: flex; width: 600px;">
+            <div id="showErr" style="background-color: rgb(243, 80, 80);color: white; width: 400px;margin-left:100px; border-radius: 30px;"></div><br>
+            <input type="text" placeholder="Enter Item" id="items" style="height: 50px;"><br>
+            <button onclick="add()"style=" height:50px;   text-transform: uppercase; background-color: rgb(34, 34, 195); color:white; cursor: pointer; ">Add to cart</button>
+            <div id="disp"></div>
+        </div>
+     </center>
+    <script>
+        var allitems = []
+        function add() {
+         var item = document.getElementById("items").value;
+           
+         if(item == ""){
+          
+             showErr.innerHTML = `<p>space must be filled</p>`
+         }else{
+            showErr.innerHTML == ""
+            allitems.push(item)
+            item.value == ""
+            // console.log(allitems);
+
+            disp.innerHTML = ""
+                for(i=0; i<allitems.length; i++) {
+                    disp.innerHTML += `<p>This is ${allitems[i]}</p>`
+                }
+            }
+         }
+    </script>
+</body>
+</html>
